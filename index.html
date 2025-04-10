@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencia de Etiquetas HTML</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+    
+    <nav>
+        <a href="#main-content">Inicio</a>
+        <a href="#" onclick="toggleHtmlReference()">Referencia HTML</a>
+        <a href=contacto.html>Contacto</a>
+    </nav>
+    
+    <div class="container">
+        <section id="main-content">
+            <h2>Bienvenido a Mi Sitio Web</h2>
+            <p>Este es el contenido principal de mi sitio web. Aquí puedes agregar cualquier información que desees mostrar a tus visitantes.</p>
+            
+            <button onclick="toggleHtmlReference()">Ver Ejemplos de Etiquetas HTML</button>
+        </section>
+        
+        <section id="html-reference">
+            <h2>Guía de Etiquetas HTML</h2>
+            <p>A continuación encontrarás una referencia completa de las etiquetas HTML más utilizadas, organizadas por categorías.</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar etiquetas..." title="Escribe el nombre de una etiqueta">
+                <p id="noResults" style="display: none; color: #d9534f; margin-top: 10px;">No se encontraron resultados para tu búsqueda.</p>
+            </div>
+
+            <div class="toc">
+                <h3>Índice de Contenidos</h3>
+                <ul>
+                    <li><a href="#estructura">Estructura Básica</a></li>
+                    <li><a href="#encabezados">Encabezados y Texto</a></li>
+                    <li><a href="#formato">Formato de Texto</a></li>
+                    <li><a href="#enlaces">Enlaces e Imágenes</a></li>
+                    <li><a href="#listas">Listas</a></li>
+                    <li><a href="#tablas">Tablas</a></li>
+                    <li><a href="#formularios">Formularios</a></li>
+                    <li><a href="#division">División y Semántica</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#meta">Meta Información</a></li>
+                    <li><a href="#ejemplo-completo">Ejemplo de Página Completa</a></li>
+                </ul>
+            </div>
+            
+            <div id="estructura" class="section">
+                <h3>Estructura Básica</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;!DOCTYPE&gt;</code></td>
+                        <td>Define el tipo de documento HTML</td>
+                        <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;html&gt;</code></td>
+                        <td>Elemento raíz de una página HTML</td>
+                        <td><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;head&gt;</code></td>
+                        <td>Contiene metadatos/información para el documento</td>
+                        <td><code>&lt;head&gt;...&lt;/head&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;title&gt;</code></td>
+                        <td>Define el título del documento</td>
+                        <td><code>&lt;title&gt;Mi Página Web&lt;/title&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;body&gt;</code></td>
+                        <td>Define el cuerpo del documento</td>
+                        <td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="encabezados" class="section">
+                <h3>Encabezados y Texto</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td>
+                        <td>Define encabezados (h1 es el más importante)</td>
+                        <td><code>&lt;h1&gt;Título Principal&lt;/h1&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;p&gt;</code></td>
+                        <td>Define un párrafo</td>
+                        <td><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;br&gt;</code></td>
+                        <td>Inserta un salto de línea</td>
+                        <td><code>Línea 1&lt;br&gt;Línea 2</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;hr&gt;</code></td>
+                        <td>Crea una línea horizontal</td>
+                        <td><code>&lt;hr&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;pre&gt;</code></td>
+                        <td>Texto preformateado (respeta espacios y saltos)</td>
+                        <td><code>&lt;pre&gt;  Texto  con  formato  &lt;/pre&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="formato" class="section">
+                <h3>Formato de Texto</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;strong&gt;</code></td>
+                        <td>Define texto importante (negrita)</td>
+                        <td><code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;em&gt;</code></td>
+                        <td>Define texto enfatizado (cursiva)</td>
+                        <td><code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;mark&gt;</code></td>
+                        <td>Define texto resaltado</td>
+                        <td><code>&lt;mark&gt;Texto resaltado&lt;/mark&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;del&gt;</code></td>
+                        <td>Define texto tachado</td>
+                        <td><code>&lt;del&gt;Texto eliminado&lt;/del&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ins&gt;</code></td>
+                        <td>Define texto insertado</td>
+                        <td><code>&lt;ins&gt;Texto insertado&lt;/ins&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sub&gt;</code></td>
+                        <td>Define texto subíndice</td>
+                        <td><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sup&gt;</code></td>
+                        <td>Define texto superíndice</td>
+                        <td><code>x&lt;sup&gt;2&lt;/sup&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;code&gt;</code></td>
+                        <td>Define código de computadora</td>
+                        <td><code>&lt;code&gt;var x = 5;&lt;/code&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="enlaces" class="section">
+                <h3>Enlaces e Imágenes</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;a&gt;</code></td>
+                        <td>Define un hipervínculo</td>
+                        <td><code>&lt;a href="https://ejemplo.com"&gt;Enlace&lt;/a&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;img&gt;</code></td>
+                        <td>Define una imagen</td>
+                        <td><code>&lt;img src="imagen.jpg" alt="Descripción"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;figure&gt;</code></td>
+                        <td>Agrupa contenido multimedia</td>
+                        <td><code>&lt;figure&gt;&lt;img src="img.jpg"&gt;&lt;figcaption&gt;Título&lt;/figcaption&gt;&lt;/figure&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;figcaption&gt;</code></td>
+                        <td>Define un título para la figura</td>
+                        <td>Ver ejemplo anterior</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="listas" class="section">
+                <h3>Listas</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ul&gt;</code></td>
+                        <td>Define una lista desordenada</td>
+                        <td><code>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ul&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ol&gt;</code></td>
+                        <td>Define una lista ordenada</td>
+                        <td><code>&lt;ol&gt;&lt;li&gt;Primero&lt;/li&gt;&lt;li&gt;Segundo&lt;/li&gt;&lt;/ol&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;li&gt;</code></td>
+                        <td>Define un elemento de la lista</td>
+                        <td>Ver ejemplos anteriores</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;dl&gt;</code></td>
+                        <td>Define una lista de definición</td>
+                        <td><code>&lt;dl&gt;&lt;dt&gt;Término&lt;/dt&gt;&lt;dd&gt;Definición&lt;/dd&gt;&lt;/dl&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;dt&gt;</code></td>
+                        <td>Define un término en lista de definición</td>
+                        <td>Ver ejemplo anterior</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;dd&gt;</code></td>
+                        <td>Define la descripción del término</td>
+                        <td>Ver ejemplo anterior</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="tablas" class="section">
+                <h3>Tablas</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;table&gt;</code></td>
+                        <td>Define una tabla</td>
+                        <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tr&gt;</code></td>
+                        <td>Define una fila en la tabla</td>
+                        <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;th&gt;</code></td>
+                        <td>Define una celda de encabezado</td>
+                        <td><code>&lt;th&gt;Encabezado&lt;/th&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;td&gt;</code></td>
+                        <td>Define una celda de datos</td>
+                        <td><code>&lt;td&gt;Datos&lt;/td&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;caption&gt;</code></td>
+                        <td>Define el título de la tabla</td>
+                        <td><code>&lt;caption&gt;Título de tabla&lt;/caption&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;thead&gt;</code></td>
+                        <td>Agrupa el contenido del encabezado</td>
+                        <td><code>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tbody&gt;</code></td>
+                        <td>Agrupa el contenido del cuerpo</td>
+                        <td><code>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Juan&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;tfoot&gt;</code></td>
+                        <td>Agrupa el contenido del pie</td>
+                        <td><code>&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="formularios" class="section">
+                <h3>Formularios</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;form&gt;</code></td>
+                        <td>Define un formulario</td>
+                        <td><code>&lt;form action="/enviar" method="post"&gt;...&lt;/form&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;input&gt;</code></td>
+                        <td>Define un campo de entrada</td>
+                        <td><code>&lt;input type="text" name="nombre"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;textarea&gt;</code></td>
+                        <td>Define un área de texto</td>
+                        <td><code>&lt;textarea rows="4" cols="50"&gt;...&lt;/textarea&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;label&gt;</code></td>
+                        <td>Define una etiqueta para un elemento</td>
+                        <td><code>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;select&gt;</code></td>
+                        <td>Define una lista desplegable</td>
+                        <td><code>&lt;select&gt;&lt;option&gt;Opción 1&lt;/option&gt;&lt;/select&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;option&gt;</code></td>
+                        <td>Define una opción en la lista</td>
+                        <td>Ver ejemplo anterior</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;button&gt;</code></td>
+                        <td>Define un botón</td>
+                        <td><code>&lt;button type="submit"&gt;Enviar&lt;/button&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;fieldset&gt;</code></td>
+                        <td>Agrupa elementos del formulario</td>
+                        <td><code>&lt;fieldset&gt;&lt;legend&gt;Datos&lt;/legend&gt;...&lt;/fieldset&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;legend&gt;</code></td>
+                        <td>Define un título para el fieldset</td>
+                        <td>Ver ejemplo anterior</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="division" class="section">
+                <h3>División y Semántica</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;div&gt;</code></td>
+                        <td>Define una división/sección (bloque)</td>
+                        <td><code>&lt;div class="contenedor"&gt;...&lt;/div&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;span&gt;</code></td>
+                        <td>Define una sección (en línea)</td>
+                        <td><code>&lt;p&gt;Texto con &lt;span style="color:red"&gt;color&lt;/span&gt;.&lt;/p&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;header&gt;</code></td>
+                        <td>Define un encabezado para el documento</td>
+                        <td><code>&lt;header&gt;...&lt;/header&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;nav&gt;</code></td>
+                        <td>Define una sección de navegación</td>
+                        <td><code>&lt;nav&gt;&lt;a href="/"&gt;Inicio&lt;/a&gt;&lt;/nav&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;main&gt;</code></td>
+                        <td>Define el contenido principal</td>
+                        <td><code>&lt;main&gt;...&lt;/main&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;section&gt;</code></td>
+                        <td>Define una sección en un documento</td>
+                        <td><code>&lt;section&gt;...&lt;/section&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;article&gt;</code></td>
+                        <td>Define un artículo independiente</td>
+                        <td><code>&lt;article&gt;...&lt;/article&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;aside&gt;</code></td>
+                        <td>Define contenido relacionado indirectamente</td>
+                        <td><code>&lt;aside&gt;...&lt;/aside&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;footer&gt;</code></td>
+                        <td>Define un pie de página</td>
+                        <td><code>&lt;footer&gt;...&lt;/footer&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="multimedia" class="section">
+                <h3>Multimedia</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;audio&gt;</code></td>
+                        <td>Define contenido de audio</td>
+                        <td><code>&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;video&gt;</code></td>
+                        <td>Define contenido de video</td>
+                        <td><code>&lt;video src="video.mp4" controls&gt;&lt;/video&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;source&gt;</code></td>
+                        <td>Define recursos para media</td>
+                        <td><code>&lt;video&gt;&lt;source src="video.mp4" type="video/mp4"&gt;&lt;/video&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;track&gt;</code></td>
+                        <td>Define texto de pista para media</td>
+                        <td><code>&lt;video&gt;&lt;track src="subtitles.vtt" kind="subtitles"&gt;&lt;/video&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;iframe&gt;</code></td>
+                        <td>Define un marco en línea</td>
+                        <td><code>&lt;iframe src="https://ejemplo.com"&gt;&lt;/iframe&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;canvas&gt;</code></td>
+                        <td>Define gráficos dibujables</td>
+                        <td><code>&lt;canvas id="miCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="meta" class="section">
+                <h3>Meta Información</h3>
+                <table>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;meta&gt;</code></td>
+                        <td>Define metadatos</td>
+                        <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;link&gt;</code></td>
+                        <td>Define relación con recurso externo</td>
+                        <td><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;style&gt;</code></td>
+                        <td>Define información de estilo</td>
+                        <td><code>&lt;style&gt;body {background-color: lightblue;}&lt;/style&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;script&gt;</code></td>
+                        <td>Define un script de cliente</td>
+                        <td><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;noscript&gt;</code></td>
+                        <td>Define contenido alternativo sin script</td>
+                        <td><code>&lt;noscript&gt;JavaScript desactivado&lt;/noscript&gt;</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="ejemplo-completo" class="section">
+                <h3>Ejemplo de Página Completa</h3>
+                <div class="example-code">
+                    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi Primera Página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenido a Mi Sitio&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#acerca"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="inicio"&gt;
+            &lt;h2&gt;Inicio&lt;/h2&gt;
+            &lt;p&gt;Bienvenido a mi primera página web creada con HTML.&lt;/p&gt;
+            &lt;img src="imagen.jpg" alt="Imagen de bienvenida"&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="acerca"&gt;
+            &lt;h2&gt;Acerca de&lt;/h2&gt;
+            &lt;p&gt;Esta página es un ejemplo para aprender HTML.&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="contacto"&gt;
+            &lt;h2&gt;Contacto&lt;/h2&gt;
+            &lt;form action="/enviar" method="post"&gt;
+                &lt;div&gt;
+                    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                    &lt;input type="text" id="nombre" name="nombre" required&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="email"&gt;Email:&lt;/label&gt;
+                    &lt;input type="email" id="email" name="email" required&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+                    &lt;textarea id="mensaje" name="mensaje" rows="4" required&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+            </div>
+            
+            <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Volver arriba</button>
+            <button onclick="toggleHtmlReference()">Ocultar Referencia HTML</button>
+        </section>
+    </div>
+    
+    <script>
+        function toggleHtmlReference() {
+            const referenceSection = document.getElementById('html-reference');
+            const mainContent = document.getElementById('main-content');
+            
+            if (referenceSection.style.display === 'none' || referenceSection.style.display === '') {
+                referenceSection.style.display = 'block';
+                mainContent.style.display = 'none';
+            } else {
+                referenceSection.style.display = 'none';
+                mainContent.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

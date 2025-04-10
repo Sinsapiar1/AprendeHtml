@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Gracias por tu mensaje! - Referencia HTML</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="contacto.css">
+    <style>
+        .thank-you-container {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .thank-you-icon {
+            font-size: 80px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-title {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you-message {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background-color: #4285f4;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #3367d6;
+        }
+        
+        .confirmation-details {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        
+        .confirmation-details h3 {
+            color: #4285f4;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="referencia-html.html#html-reference" onclick="showReference()">Referencia HTML</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    
+    <div class="container">
+        <section id="thank-you-section">
+            <div class="thank-you-container">
+                <div class="thank-you-icon">✓</div>
+                <h2 class="thank-you-title">¡Gracias por tu mensaje!</h2>
+                <p class="thank-you-message">Hemos recibido tu mensaje correctamente. Te responderemos lo más pronto posible, normalmente dentro de 24-48 horas hábiles.</p>
+                
+                <a href="referencia-html.html" class="back-button">Volver al inicio</a>
+                
+                <div class="confirmation-details">
+                    <h3>Confirmación del mensaje</h3>
+                    <p>Tu mensaje ha sido enviado correctamente a nuestro equipo. Si tienes alguna consulta urgente, no dudes en contactarnos directamente por teléfono o correo electrónico.</p>
+                    <p>Mientras tanto, ¿por qué no exploras más de nuestro sitio web?</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Referencia HTML</h3>
+                <p>Un recurso completo para aprender y consultar etiquetas HTML.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="referencia-html.html">Inicio</a></li>
+                    <li><a href="referencia-html.html#html-reference" onclick="showReference()">Referencia HTML</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>email@ejemplo.com</p>
+                <p>+123 456 7890</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Referencia HTML. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function showReference() {
+            localStorage.setItem('showReference', 'true');
+        }
+    </script>
+</body>
+</html>

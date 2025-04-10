@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Referencia HTML</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="contacto.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+    
+    <div class="container">
+        <section id="contacto-section">
+            <h2>Contacto</h2>
+            <p class="intro-text">¿Tienes alguna pregunta o sugerencia? ¡Me encantaría saber de ti! Completa el formulario a continuación y me pondré en contacto contigo lo antes posible.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <p>jaime.pivet@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📱</span>
+                        <p>+1 305 540 6846</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <p>Miami, USA.</p>
+                    </div>
+                    <div class="social-media">
+                        <h4>Sígueme en redes sociales</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" title="GitHub">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-icon" title="LinkedIn">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="social-icon" title="Twitter">
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envíame un mensaje</h3>
+                    <form id="contactForm" action="https://formspree.io/f/xkgjkqgv" method="POST" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <div class="error-message" id="nombre-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="asunto">Asunto <span class="required">*</span></label>
+                            <input type="text" id="asunto" name="asunto" required>
+                            <div class="error-message" id="asunto-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje <span class="required">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                            <div class="error-message" id="mensaje-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interes">¿Qué tema te interesa más?</label>
+                            <select id="interes" name="interes">
+                                <option value="">-- Selecciona una opción --</option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="diseno">Diseño Web</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Suscribirme al newsletter</label>
+                        </div>
+                        
+                        <!-- Campos personalizados para Formspree -->
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde la página web">
+                        <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+                        
+                        <!-- Campo oculto para evitar spam -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">Enviar mensaje</button>
+                        </div>
+                    </form>
+                    
+                    <div id="form-success" class="success-message" style="display: none;">
+                        <h3>¡Mensaje enviado con éxito!</h3>
+                        <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Referencia HTML</h3>
+                <p>Un recurso completo para aprender y consultar etiquetas HTML.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                     <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>jaime.pivet@gmail.com</p>
+                <p>+1 305 540 6846</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Referencia HTML. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function showReference() {
+            localStorage.setItem('showReference', 'true');
+        }
+        
+        function validateForm() {
+            let isValid = true;
+            const nombre = document.getElementById('nombre');
+            const email = document.getElementById('email');
+            const asunto = document.getElementById('asunto');
+            const mensaje = document.getElementById('mensaje');
+            
+            // Limpiar mensajes de error anteriores
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(el => el.textContent = '');
+            
+            // Validar nombre
+            if (nombre.value.trim() === '') {
+                document.getElementById('nombre-error').textContent = 'Por favor ingresa tu nombre';
+                isValid = false;
+            } else if (nombre.value.trim().length < 3) {
+                document.getElementById('nombre-error').textContent = 'El nombre debe tener al menos 3 caracteres';
+                isValid = false;
+            }
+            
+            // Validar email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === '') {
+                document.getElementById('email-error').textContent = 'Por favor ingresa tu correo electrónico';
+                isValid = false;
+            } else if (!emailRegex.test(email.value.trim())) {
+                document.getElementById('email-error').textContent = 'Por favor ingresa un correo electrónico válido';
+                isValid = false;
+            }
+            
+            // Validar asunto
+            if (asunto.value.trim() === '') {
+                document.getElementById('asunto-error').textContent = 'Por favor ingresa un asunto';
+                isValid = false;
+            }
+            
+            // Validar mensaje
+            if (mensaje.value.trim() === '') {
+                document.getElementById('mensaje-error').textContent = 'Por favor ingresa un mensaje';
+                isValid = false;
+            } else if (mensaje.value.trim().length < 10) {
+                document.getElementById('mensaje-error').textContent = 'El mensaje debe tener al menos 10 caracteres';
+                isValid = false;
+            }
+            
+            // Si el formulario no es válido, evitar envío
+            if (!isValid) {
+                return false;
+            }
+            
+            // Si llegamos aquí, el formulario es válido y se enviará a Formspree
+            // Formspree se encargará de mostrar un mensaje de éxito
+            return true;
+        }
+    </script>
+</body>
+</html>

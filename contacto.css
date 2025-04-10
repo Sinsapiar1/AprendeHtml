@@ -1,0 +1,246 @@
+/* Estilos específicos para la página de contacto */
+
+/* Navegación activa */
+nav a.active {
+    color: #4285f4;
+    border-bottom: 2px solid #4285f4;
+    padding-bottom: 5px;
+}
+
+/* Sección de contacto */
+#contacto-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Contenedor de contacto */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #4285f4;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 300px;
+}
+
+/* Información de contacto */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #4285f4;
+    min-width: 30px;
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #4285f4;
+}
+
+/* Formulario de contacto */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.required {
+    color: #d9534f;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 5px rgba(66, 133, 244, 0.3);
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3367d6;
+}
+
+/* Mensajes de error y éxito */
+.error-message {
+    color: #d9534f;
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-message h3 {
+    color: #3c763d;
+    margin-bottom: 10px;
+}
+
+/* Footer mejorado */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #4285f4;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        width: 100%;
+        padding-right: 0;
+    }
+}
